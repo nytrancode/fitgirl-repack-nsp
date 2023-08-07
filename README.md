@@ -1,22 +1,35 @@
-# FITGIRL-REPACKS-NSP
 
-This is a tool/executable for Windows to extract [Fitgirl Repack](https://fitgirl-repacks.site/) switch emulated package game into its own NSP. You may need to get standalone NSP file format, maybe to play into your own CFW Switch or another emulator (Ryujinx, etc)
 
-### How to RUN
-- Download the latest `extractor.exe` binary from [release page](https://github.com/harunalfat/fitgirl-repacks-nsp/releases)
-- Copy the downloaded `extractor.exe` into the root of switch emulated Fitgirl-repacks directory. Example directory is `"C:/Games/Mario Kart 8 Deluxe"`
-- Double click or run the `extractor.exe` file, and the default name for output file is `out.nsp`. You may also run it from CMD/Powershell and changing the output file name
+# Extract NSP files from Fitgirl Repacks
+
+This tool for Windows extracts Nintendo Switch game files (.NSP) from [Fitgirl Repacks](https://fitgirlrepacks.org/). 
+
+You may want NSP files to play games on a modded Switch or emulator like Ryujinx.
+
+### How to Use
+
+- Download the latest `extractor.exe` from the [releases page](https://github.com/nytrancode/fitgirl-repack-nsp/releases).
+
+- Copy `extractor.exe` into the Fitgirl Repack game folder (e.g. "C:/Games/Mario Kart 8 Deluxe"). 
+
+- Double click `extractor.exe` to run it. The output file is `out.nsp` by default. 
+
+- Or run from CMD/PowerShell to specify output filename:
+
 ```
 extractor.exe -o mario-kart-8-deluxe.nsp
 ```
 
-### How to COMPILE
-- You need to have Golang with version >= 1.16
-- Run command below
+### How to Compile
+
+- Requires Golang 1.16+
+
+- Compile with:
+
 ```
 GOOS=windows GOARCH=amd64 go build extractor.go
 ```
 
-### Dependency
-- [nspBuild](https://github.com/CVFireDragon/nspBuild/releases) by CVFireDragon
+### Dependency 
 
+- Uses [nspBuild](https://github.com/CVFireDragon/nspBuild/releases) by CVFireDragon
